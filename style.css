@@ -365,20 +365,35 @@ img {
 }
 
 .fv-video__link {
-  margin: 12px 0 0;
-  font-size: 13px;
+  margin: 16px 0 0;
+  font-size: 14px;
   font-weight: 700;
 }
 
 .fv-video__link a {
-  color: var(--orange);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  color: var(--white);
+  background: var(--orange);
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(232, 117, 42, 0.38);
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.fv-video__link a::after {
+  content: "→";
+  font-size: 15px;
+  line-height: 1;
 }
 
 .fv-video__link a:hover {
-  color: #ffc090;
+  background: var(--orange-hover);
+  color: var(--white);
+  box-shadow: 0 10px 24px rgba(232, 117, 42, 0.46);
+  transform: translateY(-2px);
 }
 
 /* ========== サブページ共通ヒーロー ========== */
