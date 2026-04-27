@@ -12,6 +12,9 @@
   --orange-hover: #d4631e;
   --white: #ffffff;
   --gray-light: #f5f6f8;
+  --sea-mist: #eef4f8;
+  --warm-paper: #fbf8f3;
+  --steel-blue-light: #eef1f7;
   --text: #333333;
   --text-light: #666666;
 }
@@ -865,11 +868,11 @@ body.body--recruit {
 }
 
 .growth-timeline__card {
-  background: var(--white);
-  border: 1px solid #e8eaef;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafd 100%);
+  border: 1px solid #dde4ef;
   border-radius: 10px;
   padding: 20px 22px;
-  box-shadow: 0 2px 14px rgba(26, 39, 68, 0.06);
+  box-shadow: 0 7px 18px rgba(26, 39, 68, 0.08);
 }
 
 .growth-timeline__phase {
@@ -933,9 +936,9 @@ body.body--recruit {
   margin: 0 auto 22px;
   padding: 18px 20px 18px 22px;
   border-left: 4px solid var(--orange);
-  background: rgba(255, 255, 255, 0.72);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.78) 100%);
   border-radius: 0 10px 10px 0;
-  box-shadow: 0 2px 12px rgba(26, 39, 68, 0.06);
+  box-shadow: 0 5px 14px rgba(26, 39, 68, 0.08);
 }
 
 .onb-phase {
@@ -1066,6 +1069,12 @@ body.body--recruit {
   border-radius: 10px;
   background: var(--white);
   overflow: hidden;
+}
+
+.recruit-faq__item {
+  border-left: 4px solid rgba(232, 117, 42, 0.7);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(246, 249, 253, 0.98) 100%);
+  box-shadow: inset 0 0 0 1px #e1e7f0;
 }
 
 .recruit-faq__item {
@@ -1212,7 +1221,7 @@ body.body--recruit {
 
 /* ========== 採用ページ ========== */
 .section-recruit-alt {
-  background: var(--gray-light);
+  background: var(--sea-mist);
 }
 
 .recruit-block {
@@ -1318,10 +1327,16 @@ body.body--recruit {
   background: var(--white);
   padding: 0 0 28px;
   border-radius: 10px;
-  border: 1px solid #e8eaef;
+  border: 1px solid #e2e7ef;
   border-top: 3px solid var(--orange);
-  box-shadow: 0 2px 12px rgba(26, 39, 68, 0.05);
+  box-shadow: 0 8px 22px rgba(26, 39, 68, 0.08);
   overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.evp-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(26, 39, 68, 0.12);
 }
 
 .evp-item__img {
@@ -1393,9 +1408,10 @@ body.body--recruit {
 
 .job-card {
   background: var(--white);
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 28px 24px;
-  border: 2px solid var(--navy);
+  border: 1px solid #dbe2ee;
+  box-shadow: 0 6px 18px rgba(26, 39, 68, 0.06);
 }
 
 .job-card h4 {
@@ -1448,10 +1464,14 @@ body.body--recruit {
 
 .flow-steps li {
   position: relative;
-  padding-left: 48px;
+  padding: 18px 18px 18px 52px;
   margin-bottom: 20px;
   font-size: 15px;
   line-height: 1.7;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid #e2e7ef;
+  box-shadow: 0 4px 14px rgba(26, 39, 68, 0.05);
 }
 
 .flow-steps li::before {
@@ -2135,9 +2155,35 @@ body.body--recruit {
 }
 
 .numbers-grid--light .number-card--light {
-  border: 1px solid #e8eaef;
+  border: 1px solid #dbe3ef;
   background: var(--white);
-  box-shadow: 0 2px 12px rgba(26, 39, 68, 0.06);
+  box-shadow: 0 7px 20px rgba(26, 39, 68, 0.07);
+  border-top: 3px solid rgba(232, 117, 42, 0.5);
+}
+
+body.body--recruit .section-title {
+  position: relative;
+  padding-bottom: 14px;
+}
+
+body.body--recruit .section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 48px;
+  height: 3px;
+  border-radius: 999px;
+  transform: translateX(-50%);
+  background: var(--orange);
+}
+
+body.body--recruit .section-about {
+  background: var(--warm-paper);
+}
+
+body.body--recruit .section-treatment {
+  background: var(--steel-blue-light);
 }
 
 .numbers-grid--light .number-label {
