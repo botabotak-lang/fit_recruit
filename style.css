@@ -959,6 +959,17 @@ body.body--recruit {
   line-height: 1.45;
 }
 
+.onb-step__img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  margin: 0 0 14px;
+  border-radius: 8px;
+  border: 1px solid #dbe3ef;
+  box-shadow: 0 6px 18px rgba(26, 39, 68, 0.08);
+}
+
 .onb-list {
   margin: 0;
   padding-left: 1.15em;
