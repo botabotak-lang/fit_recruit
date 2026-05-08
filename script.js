@@ -77,4 +77,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     lastScroll = currentScroll;
   });
+
+  // ========== スクロールリビール ==========
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-scale');
+
+  if (revealEls.length && !prefersReduced && 'IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  }
+
+  // ========== ナンバーカウンターアップ ==========
+  const counterEls = document.querySelectorAll('[data-count]');
+
+  if (counterEls.length && !prefersReduced && 'IntersectionObserver' in window) {
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseInt(el.dataset.count, 10);
+        const suffix = el.innerHTML.replace(/^\d+/, '');
+        const duration = 1000;
+        const startTime = performance.now();
+
+        function step(now) {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.innerHTML = Math.round(target * eased) + suffix;
+          if (progress < 1) requestAnimationFrame(step);
+        }
+
+        requestAnimationFrame(step);
+        counterObserver.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+
+    counterEls.forEach(el => counterObserver.observe(el));
+  }
 });

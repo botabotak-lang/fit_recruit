@@ -2353,6 +2353,59 @@ body.body--recruit .section-treatment {
   min-height: 280px;
 }
 
+/* ========== スクロールリビール ========== */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-22px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.88) translateY(16px);
+  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.34, 1.4, 0.64, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* 事務職削除後：技術職カードを1列フル幅 */
+.job-cards--single {
+  grid-template-columns: 1fr;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ========== レスポンシブ ========== */
 @media (max-width: 768px) {
   .sp-only { display: inline; }
