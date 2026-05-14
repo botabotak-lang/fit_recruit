@@ -155,7 +155,7 @@ export default function CompanyPage() {
                 <div className="rounded-lg border-l-4 border-navy bg-slate-50 p-4">
                   <p className="font-bold text-navy">3. 現場の和を大切にする</p>
                   <p className="mt-1 text-sm leading-7 text-slate-700">
-                    周りと連携し、チームで仕事をやり遂げる。それが現場の流儀です。
+                    周りと連携し、チームで仕事をやり遂げる。それがエフアイティの流儀です。
                   </p>
                 </div>
               </div>
