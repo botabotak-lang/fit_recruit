@@ -4,20 +4,6 @@ import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
 import { HeroTitleReveal } from "@/components/HeroTitleReveal";
 
-const serviceCards = [
-  {
-    title: "船舶通信機器",
-    text: "運航に不可欠な通信系の保守・修理・設置。",
-  },
-  {
-    title: "航海計器",
-    text: "安全航行を支える計測・表示系のメンテナンス。",
-  },
-  {
-    title: "漁労機器",
-    text: "漁業現場の生産性と安全に直結する機器のサポート。",
-  },
-];
 
 export default function HomePage() {
   return (
@@ -89,29 +75,37 @@ export default function HomePage() {
       </section>
 
       <section className="py-20" id="service">
-        <div className="site-container">
+        <div className="site-container max-w-3xl text-center">
           <Reveal>
-            <h2 className="section-title mb-12 text-center">
+            <h2 className="section-title mb-8">
               <span className="section-title-en">SERVICE</span>
               業務内容
             </h2>
           </Reveal>
-          <div className="grid gap-6 md:grid-cols-3">
-            {serviceCards.map((card, index) => (
-              <Reveal key={card.title} delay={index * 0.1}>
-                <article className="h-full rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lift">
-                  <div className="mb-4 h-10 w-1 rounded-full bg-orange" aria-hidden="true" />
-                  <h3 className="mb-3 text-xl font-black text-navy">{card.title}</h3>
-                  <p className="text-sm leading-8 text-slate-700">{card.text}</p>
-                  <p className="mt-4 text-sm">
-                    <Link href="/service" className="font-bold text-orange underline underline-offset-4">
-                      詳細を見る
-                    </Link>
-                  </p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal delay={0.08}>
+            <p className="mb-8 text-sm leading-8 text-slate-700">
+              船舶に装備される通信機器・航海計器・漁労機器を専門領域とし、定期点検から故障修理・設置工事まで一貫してお引き受けします。
+            </p>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <ul className="mb-10 flex flex-wrap justify-center gap-3" aria-label="対応機器カテゴリ">
+              {["船舶通信機器", "航海計器", "漁労機器"].map((label) => (
+                <li key={label}>
+                  <span className="inline-block rounded-full border border-orange/40 px-5 py-2 text-sm font-bold text-navy">
+                    {label}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal delay={0.16}>
+            <Link
+              href="/service"
+              className="inline-block rounded-md bg-orange px-8 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-orange/90"
+            >
+              業務内容の詳細を見る
+            </Link>
+          </Reveal>
         </div>
       </section>
 
