@@ -146,6 +146,14 @@ export default function HomePage() {
               </article>
             </Reveal>
           </div>
+          <Reveal className="mt-8 text-center" delay={0.18}>
+            <Link
+              href="/company"
+              className="inline-block rounded-md border border-white/40 px-8 py-3 text-sm font-bold text-white transition hover:border-orange hover:text-orange"
+            >
+              会社概要を見る
+            </Link>
+          </Reveal>
         </div>
       </section>
 
