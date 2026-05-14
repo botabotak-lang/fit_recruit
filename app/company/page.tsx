@@ -136,8 +136,7 @@ export default function CompanyPage() {
               <h3 className="mb-3 border-b-2 border-orange pb-2 text-lg font-black text-navy">Vision（私たちが目指す姿）</h3>
               <p className="mb-4 text-lg font-bold text-navy">FITがいれば大丈夫、と言われる技術会社であり続ける。</p>
               <p className="text-sm leading-8 text-slate-700">
-                静岡県焼津市を拠点に、<strong>無線通信・航海計器</strong>から<strong>電気（強電）</strong>
-                まで社内で対応できる体制を強化し、<strong>全国</strong>の港・船上へ出向きます。積み重ねた経験と誠実な対応で、海の現場から
+                静岡県焼津市を拠点に、<strong>無線通信・航海計器</strong>の専門技術を軸に、<strong>全国</strong>の港・船上へ出向きます。積み重ねた経験と誠実な対応で、海の現場から
                 <strong>信頼されるパートナー</strong>であり続けます。
               </p>
             </div>
