@@ -77,6 +77,14 @@ export default function ServicePage() {
           <p className="mx-auto mt-4 max-w-3xl text-sm leading-8 text-white/90 sm:text-base">
             船舶通信機器・航海計器・漁労機器を中心に、現場での保守から設置まで一貫してお引き受けします。
           </p>
+          <div className="mt-8">
+            <Link
+              href="/contact"
+              className="inline-block rounded-md bg-orange px-7 py-3 text-base font-bold text-white transition hover:-translate-y-0.5 hover:bg-orange/90"
+            >
+              お問い合わせ・ご相談
+            </Link>
+          </div>
         </div>
       </section>
 

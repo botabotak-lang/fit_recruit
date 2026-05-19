@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -36,7 +37,15 @@ export default function CompanyPage() {
           <p className="mx-auto mt-4 max-w-3xl text-sm leading-8 text-white/90 sm:text-base">
             経営の考え方と会社情報を掲載しています。採用をご検討の方は、下記「採用情報」から詳細をご覧ください。
           </p>
-          <nav className="mt-8 flex flex-wrap justify-center gap-5 text-sm" aria-label="このページ内の移動">
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/contact"
+              className="rounded-md bg-orange px-7 py-3 text-base font-bold text-white transition hover:-translate-y-0.5 hover:bg-orange/90"
+            >
+              お問い合わせ・ご相談
+            </Link>
+          </div>
+          <nav className="mt-6 flex flex-wrap justify-center gap-5 text-sm" aria-label="このページ内の移動">
             <a href="#president" className="border-b border-white/40 pb-1 font-bold hover:border-orange">
               代表挨拶
             </a>

@@ -27,12 +27,12 @@ export default function HomePage() {
             唯一無二の頼られる船舶技術会社であり続けます。
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="rounded-md bg-orange px-7 py-3 text-base font-bold text-white transition hover:-translate-y-0.5 hover:bg-orange/90"
             >
               お問い合わせ・ご相談
-            </a>
+            </Link>
             <a
               href="https://recruit.fit-ec.jp"
               className="rounded-md border border-white/50 px-6 py-3 text-sm font-bold text-white transition hover:border-orange hover:text-orange"
