@@ -11,6 +11,7 @@ const links = [
   { href: "/service", label: "業務内容" },
   { href: "/#numbers", label: "拠点・対応" },
   { href: "/company", label: "会社概要" },
+  { href: "/contact", label: "お問い合わせ" },
 ];
 
 export function Header() {
@@ -43,7 +44,7 @@ export function Header() {
             <Image
               src="/images/fit-logo-white.png"
               alt="有限会社エフアイティ"
-              width={560}
+              width={460}
               height={180}
               className="h-12 w-auto sm:h-14"
               priority

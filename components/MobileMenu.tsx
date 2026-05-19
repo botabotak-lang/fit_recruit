@@ -13,6 +13,7 @@ const links = [
   { href: "/service", label: "業務内容" },
   { href: "/#numbers", label: "拠点・対応" },
   { href: "/company", label: "会社概要" },
+  { href: "/contact", label: "お問い合わせ" },
   { href: "https://recruit.fit-ec.jp", label: "採用情報", external: true },
 ];
 

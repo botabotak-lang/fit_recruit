@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -60,9 +61,16 @@ export default function CompanyPage() {
               代表挨拶
             </h2>
           </Reveal>
-          <div className="grid gap-8 rounded-xl border border-slate-200 bg-white p-7 md:grid-cols-[1fr_2fr]">
-            <div className="grid min-h-60 place-items-center rounded-lg border border-dashed border-slate-300 bg-slate-50 text-sm text-slate-500">
-              社長ポートレート
+          <div className="grid gap-8 rounded-xl border border-slate-200 bg-white p-7 md:grid-cols-[2fr_3fr]">
+            <div className="overflow-hidden rounded-lg" style={{ minHeight: "360px" }}>
+              <Image
+                src="/images/shacho-portrait.webp"
+                alt="代表取締役 豊島 政一"
+                width={600}
+                height={500}
+                className="h-full w-full object-cover object-top"
+                priority
+              />
             </div>
             <div className="space-y-5 text-sm leading-8 text-slate-700 sm:text-base">
               <p>
