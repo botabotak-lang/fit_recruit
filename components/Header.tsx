@@ -30,19 +30,19 @@ export function Header() {
     setOpen(false);
   }, [pathname]);
 
-  const dark = scrolled || pathname !== "/";
+  const elevated = scrolled || pathname !== "/";
 
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-[90] h-20 transition-colors duration-500 ${
-          dark ? "bg-navy/95 shadow-lg backdrop-blur-sm" : "bg-transparent"
+        className={`fixed inset-x-0 top-0 z-[90] h-20 border-b border-navy/10 bg-white transition-shadow duration-500 ${
+          elevated ? "shadow-lg" : "shadow-sm"
         }`}
       >
         <div className="site-container flex h-full items-center justify-between">
           <Link href="/" aria-label="有限会社エフアイティ トップへ" className="shrink-0">
             <Image
-              src="/images/fit-logo-white.png"
+              src="/images/fv-logo-color.png"
               alt="有限会社エフアイティ"
               width={460}
               height={180}
@@ -56,9 +56,7 @@ export function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`text-sm font-bold transition ${
-                  dark ? "text-white hover:text-orange" : "text-white hover:text-orange"
-                }`}
+                className="text-sm font-bold text-navy transition hover:text-orange"
               >
                 {link.label}
               </Link>
@@ -76,7 +74,7 @@ export function Header() {
           <button
             type="button"
             aria-label="メニュー"
-            className="grid h-11 w-11 place-items-center rounded-md border border-white/40 text-white lg:hidden"
+            className="grid h-11 w-11 place-items-center rounded-md border border-navy/30 text-navy lg:hidden"
             onClick={() => setOpen(true)}
           >
             <span className="flex flex-col gap-1.5">
