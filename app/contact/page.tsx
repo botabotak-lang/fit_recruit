@@ -274,7 +274,7 @@ export default function ContactPage() {
           )}
 
           {/* 代替連絡先 */}
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl border border-slate-200 bg-white p-6 text-center shadow-sm">
               <p className="mb-1 text-xs font-bold uppercase tracking-widest text-orange">
                 PHONE
@@ -303,6 +303,23 @@ export default function ContactPage() {
               </a>
               <p className="mt-2 text-xs text-slate-500">
                 24時間受付（返信は営業日）
+              </p>
+            </div>
+            <div className="rounded-xl border border-[#06C755]/30 bg-[#06C755]/5 p-6 text-center shadow-sm">
+              <p className="mb-1 text-xs font-bold uppercase tracking-widest text-[#06C755]">
+                LINE
+              </p>
+              <p className="mb-1 font-bold text-navy">LINEでのお問い合わせ</p>
+              <a
+                href={process.env.NEXT_PUBLIC_LINE_URL ?? "https://lin.ee/QSTpOPS"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 inline-flex items-center gap-1.5 text-base font-bold text-[#06C755] transition hover:underline"
+              >
+                公式LINEを開く
+              </a>
+              <p className="mt-2 text-xs text-slate-500">
+                気軽にメッセージをどうぞ
               </p>
             </div>
           </div>
